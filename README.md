@@ -58,11 +58,12 @@ Graphs available
 
 Code explanations:
 
-| Serial Number| Code  | Function |
-| ------------- | ------------- | ------------- |
-| 1  | imu_test.ino | To access Acceleratometer, Gyroscope and Magnetometer data  |
-| 2 |  imu_read.py| Code to access the serial imu data and display the results |
-| 3  |  plot_all_9axis_live.py | Access all 9 axis Serial data through python scripts |
-| 4 | plot_acc.py | Plotting only acceleratometer data|
-| 5 | | |
+| Serial Number| Code  | Function | Arduino Code Uploaded |
+| ------------- | ------------- | ------------- |------------- |
+| 1  | IMU_ACC_GYRO_MAG.ino | To access Acceleratometer, Gyroscope and Magnetometer data | IMU_ACC_GYRO_MAG |
+| 2 |IMU_X_Y_Z | To get inclination w.r.t X, Y, and Z axes |IMU_X_Y_Z |
+| 3 |  imu_read.py| Code to access the serial imu data and display the results |IMU_ACC_GYRO_MAG |
+| 4  |  plot_all_9axis_live.py | Access all 9 axis Serial data through python scripts |IMU_ACC_GYRO_MAG |
+| 5 | plot_acc.py | Plotting only acceleratometer data|IMU_ACC_GYRO_MAG |
+
  
