@@ -23,6 +23,14 @@ Install the following by going to **Tools > Manage Libraries**
 - Arduino BNO055
 - Adafruit Unified Sensor
 
+Verify the USB Port by entering:
+
+    ls /dev/tty
+
+After verifying, make this port an executable by entering:
+
+    sudo chmod a+rw /dev/ttyUSB0 
+
 Code explanations:
 
 | Serial Number| Code  | Function |
