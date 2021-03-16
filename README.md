@@ -81,4 +81,6 @@ After verifying, make this port an executable by entering:
 | 4 | quart_to_euler.py | Gets quarternion data and converts to Euler Angles and writes in a txt file | IMU_QUARTERNION |
 | 5 | plot_roll_pitch_yaw_live.py.py | Gets quarternion data and converts to Euler Angles and plots it | IMU_QUARTERNION |
 
- 
+ ## References
+
+- Check the official Adafruit [GitHub](https://github.com/adafruit/Adafruit_BNO055.git) repo for reference
