@@ -54,6 +54,10 @@ After verifying, make this port an executable by entering:
   <img height="500" src="Images/3_acc.png">
 </p>
 
+- Roll Pitch Yaw data - *plot_roll_pitch_yaw_live.py*
+<p align="center">
+  <img height="500" src="Images/rpy.png">
+</p>
 
 ## ARDUINO C CODE LOOKUP TABLE
 
@@ -72,5 +76,6 @@ After verifying, make this port an executable by entering:
 | 2  |  plot_all_9axis_live.py | Access all 9 axis Serial data through python scripts |IMU_ACC_GYRO_MAG |
 | 3 | plot_acc.py | Plotting only acceleratometer data|IMU_ACC_GYRO_MAG |
 | 4 | quart_to_euler.py | Gets quarternion data and converts to Euler Angles and writes in a txt file | IMU_QUARTERNION |
+| 5 | plot_roll_pitch_yaw_live.py.py | Gets quarternion data and converts to Euler Angles and plots it | IMU_QUARTERNION |
 
  
