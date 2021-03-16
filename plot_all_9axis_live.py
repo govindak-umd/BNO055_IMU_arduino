@@ -49,28 +49,26 @@ mag_z_array = []
 
 fig = plt.figure()
 
-# Enter in a row, column, idx format
-
 # 3 X 3 plots, Plot 1
-acc_x_plot = fig.add_subplot(3,1,1)
+acc_x_plot = fig.add_subplot(3,3,1)
 # 3 X 3 plots, Plot 2
-acc_y_plot = fig.add_subplot(3,1,2)
+acc_y_plot = fig.add_subplot(3,3,2)
 # 3 X 3 plots, Plot 3
-acc_z_plot = fig.add_subplot(3,1,3)
+acc_z_plot = fig.add_subplot(3,3,3)
 
-# # 3 X 3 plots, Plot 4
-# gyr_x_plot = fig.add_subplot(3,3,4)
-# # 3 X 3 plots, Plot 5
-# gyr_y_plot = fig.add_subplot(3,3,5)
-# # 3 X 3 plots, Plot 6
-# gyr_z_plot = fig.add_subplot(3,3,6)
+# 3 X 3 plots, Plot 4
+gyr_x_plot = fig.add_subplot(3,3,4)
+# 3 X 3 plots, Plot 5
+gyr_y_plot = fig.add_subplot(3,3,5)
+# 3 X 3 plots, Plot 6
+gyr_z_plot = fig.add_subplot(3,3,6)
 
-# # 3 X 3 plots, Plot 7
-# mag_x_plot = fig.add_subplot(3,3,7)
-# # 3 X 3 plots, Plot 8
-# mag_y_plot = fig.add_subplot(3,3,8)
-# # 3 X 3 plots, Plot 9
-# mag_z_plot = fig.add_subplot(3,3,9)
+# 3 X 3 plots, Plot 7
+mag_x_plot = fig.add_subplot(3,3,7)
+# 3 X 3 plots, Plot 8
+mag_y_plot = fig.add_subplot(3,3,8)
+# 3 X 3 plots, Plot 9
+mag_z_plot = fig.add_subplot(3,3,9)
 
 
 time_stamps_acc = []
@@ -117,6 +115,10 @@ def AnimatePlots(i):
 
 	decoded_raw_data = ser.readline().decode("ascii")
 
+	# Update the time coordinate
+
+	
+
 	# Get the data code for acc, gyr and mag
 
 	data_code = decoded_raw_data[0:3]
@@ -138,38 +140,38 @@ def AnimatePlots(i):
 		acc_y_plot.plot(time_stamps_acc, acc_y_array, 'r')
 		acc_z_plot.plot(time_stamps_acc, acc_z_array, 'r')
 
-	# if data_code == 'gyr':
+	if data_code == 'gyr':
 
 
-	# 	gyr_data = decoded_raw_data[3:]
+		gyr_data = decoded_raw_data[3:]
 
-	# 	gyr_data_list =gyr_data.split(',')
+		gyr_data_list =gyr_data.split(',')
 
-	# 	gyr_x_array.append(float(gyr_data_list[0]))
-	# 	gyr_y_array.append(float(gyr_data_list[1]))
-	# 	gyr_z_array.append(float(gyr_data_list[2]))
+		gyr_x_array.append(float(gyr_data_list[0]))
+		gyr_y_array.append(float(gyr_data_list[1]))
+		gyr_z_array.append(float(gyr_data_list[2]))
 
-	# 	time_stamps_gyr.append(time.time()-time_start)
+		time_stamps_gyr.append(time.time()-time_start)
 
-	# 	gyr_x_plot.plot(time_stamps_gyr, gyr_x_array, 'b')
-	# 	gyr_y_plot.plot(time_stamps_gyr, gyr_y_array, 'b')
-	# 	gyr_z_plot.plot(time_stamps_gyr, gyr_z_array, 'b')
+		gyr_x_plot.plot(time_stamps_gyr, gyr_x_array, 'b')
+		gyr_y_plot.plot(time_stamps_gyr, gyr_y_array, 'b')
+		gyr_z_plot.plot(time_stamps_gyr, gyr_z_array, 'b')
 	
-	# if data_code == 'mag':
+	if data_code == 'mag':
 
-	# 	mag_data = decoded_raw_data[3:]
+		mag_data = decoded_raw_data[3:]
 
-	# 	mag_data_list =mag_data.split(',')
+		mag_data_list =mag_data.split(',')
 
-	# 	mag_x_array.append(float(mag_data_list[0]))
-	# 	mag_y_array.append(float(mag_data_list[1]))
-	# 	mag_z_array.append(float(mag_data_list[2]))
+		mag_x_array.append(float(mag_data_list[0]))
+		mag_y_array.append(float(mag_data_list[1]))
+		mag_z_array.append(float(mag_data_list[2]))
 
-	# 	time_stamps_mag.append(time.time()-time_start)
+		time_stamps_mag.append(time.time()-time_start)
 
-	# 	mag_x_plot.plot(time_stamps_mag, mag_x_array, 'g')
-	# 	mag_y_plot.plot(time_stamps_mag, mag_y_array, 'g')
-	# 	mag_z_plot.plot(time_stamps_mag, mag_z_array, 'g')
+		mag_x_plot.plot(time_stamps_mag, mag_x_array, 'g')
+		mag_y_plot.plot(time_stamps_mag, mag_y_array, 'g')
+		mag_z_plot.plot(time_stamps_mag, mag_z_array, 'g')
 
 ani = animation.FuncAnimation(fig, AnimatePlots, interval=10)
 plt.show()

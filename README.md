@@ -4,7 +4,7 @@ This repo shows you how to use BNO055 IMU
 
 Hardware needed:
 
-- BNO055 IMU
+- BNO055 9-axis IMU sensor 
 - Arduino (Nano used here)
 - Male to Male Jumpers
 - Breadboard
@@ -47,8 +47,8 @@ Code explanations:
 | Serial Number| Code  | Function |
 | ------------- | ------------- | ------------- |
 | 1  | imu_test.ino | To access Acceleratometer, Gyroscope and Magnetometer data  |
-| 2  |  py_serial_test.py | Access Serial data through python scripts |
-| 3 |  | |
+| 2 |  imu_read.py| Code to access the serial imu data and display the results |
+| 3  |  py_serial_test.py | Access Serial data through python scripts |
 | 4 |  | |
 | 5 | | |
  
