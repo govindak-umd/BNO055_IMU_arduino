@@ -30,6 +30,10 @@ Install the following on your Arduino IDE by going to **Tools > Manage Libraries
 - Arduino BNO055
 - Adafruit Unified Sensor
 
+Install Pyserial
+
+    pip install pyserial
+
 Verify the USB Port by entering:
 
     ls /dev/tty
@@ -43,7 +47,7 @@ Code explanations:
 | Serial Number| Code  | Function |
 | ------------- | ------------- | ------------- |
 | 1  | imu_test.ino | To access Acceleratometer, Gyroscope and Magnetometer data  |
-| 2  |   | |
+| 2  |  py_serial_test.py | Access Serial data through python scripts |
 | 3 |  | |
 | 4 |  | |
 | 5 | | |
