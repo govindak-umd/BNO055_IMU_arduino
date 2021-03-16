@@ -1,4 +1,4 @@
-"""Summary Code tp read and plot data, live.
+"""Summary
 
 Attributes:
     acc_x_array (list): Description
@@ -7,7 +7,7 @@ Attributes:
     acc_y_plot (TYPE): Description
     acc_z_array (list): Description
     acc_z_plot (TYPE): Description
-    ani (TYPE): Description
+    animate_plot (TYPE): Description
     fig (TYPE): Description
     gyr_x_array (list): Description
     gyr_x_plot (TYPE): Description
@@ -22,8 +22,10 @@ Attributes:
     mag_z_array (list): Description
     mag_z_plot (TYPE): Description
     ser (TYPE): Description
+    time_stamps_acc (list): Description
+    time_stamps_gyr (list): Description
+    time_stamps_mag (list): Description
     time_start (TYPE): Description
-    time_stamps (list): Description
 """
 import serial
 import matplotlib.pyplot as plt
@@ -174,5 +176,5 @@ def AnimatePlots(i):
 		mag_y_plot.plot(time_stamps_mag, mag_y_array, 'g')
 		mag_z_plot.plot(time_stamps_mag, mag_z_array, 'g')
 
-ani = animation.FuncAnimation(fig, AnimatePlots, interval=10)
+animate_plot = animation.FuncAnimation(fig, AnimatePlots, interval=10)
 plt.show()
