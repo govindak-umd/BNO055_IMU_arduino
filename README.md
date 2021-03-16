@@ -25,7 +25,7 @@ The connections are laid out here:
 | GND | GND  | 
 | 5V | Vin | 
 
-Install the following by going to **Tools > Manage Libraries**
+Install the following on your Arduino IDE by going to **Tools > Manage Libraries**
 
 - Arduino BNO055
 - Adafruit Unified Sensor
