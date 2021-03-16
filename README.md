@@ -68,6 +68,8 @@ After verifying, make this port an executable by entering:
 | 2 |IMU_X_Y_Z | To get inclination w.r.t X, Y, and Z axes |
 | 3 | IMU_QUARTERNION | Gets quarternion data from the BNO055 sensor | 
 | 4 | CALLIBRATION_CHECK | To callibrate the Accelerometer, Gyroscope, Magnetometer and System of IMU | 
+| 5 | ALL_IMU_DATA | Access all the possible data from BNO055 IMU |
+| 6 | POSITION | Get position data from IMU | 
 
 ## PYTHON CODE LOOKUP TABLE
 
