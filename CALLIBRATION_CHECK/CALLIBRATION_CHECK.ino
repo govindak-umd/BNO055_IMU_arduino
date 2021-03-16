@@ -36,6 +36,15 @@ void loop() {
   Serial.print(mag);
   Serial.print(" , ");
   Serial.println(system);
-  
+
+  imu::Vector<3> acc_vec = myIMU.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);
+
+  Serial.print("Accelerometer Values : ");
+  Serial.print(acc_vec.x());
+  Serial.print(",");
+  Serial.print(acc_vec.y());
+  Serial.print(",");
+  // Verify the callibration by making sure the acc_vec.z() is around 9.8 m/s^2
+  Serial.println(acc_vec.z());
   delay(BNO055_SAMPLERATE_DELAY_MS);
 }
