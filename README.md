@@ -58,11 +58,11 @@ After verifying, make this port an executable by entering:
 ## ARDUINO C CODE LOOKUP TABLE
 
 
-| Serial Number| Code  | Function | Arduino Code Uploaded |
-| ------------- | ------------- | ------------- |------------- |
-| 1  | IMU_ACC_GYRO_MAG.ino | To access Acceleratometer, Gyroscope and Magnetometer data | IMU_ACC_GYRO_MAG |
-| 2 |IMU_X_Y_Z | To get inclination w.r.t X, Y, and Z axes |IMU_X_Y_Z |
-| 3 | IMU_QUARTERNION | Gets quarternion data from the BNO055 sensor | IMU_QUARTERNION |
+| Serial Number| Code  | Function | 
+| ------------- | ------------- | ------------- |
+| 1  | IMU_ACC_GYRO_MAG.ino | To access Acceleratometer, Gyroscope and Magnetometer data | 
+| 2 |IMU_X_Y_Z | To get inclination w.r.t X, Y, and Z axes |
+| 3 | IMU_QUARTERNION | Gets quarternion data from the BNO055 sensor | 
 
 ## PYTHON CODE LOOKUP TABLE
 
