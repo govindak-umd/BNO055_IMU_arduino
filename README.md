@@ -12,6 +12,10 @@ Hardware needed:
 
 Wiring should be done as shown in the image below:
 
+<p align="center">
+  <img height="500" src="Images/setup.jpeg">
+</p>
+
 The connections are laid out here:
 
 Install the following by going to **Tools > Manage Libraries**
