@@ -18,10 +18,25 @@ Wiring should be done as shown in the image below:
 
 The connections are laid out here:
 
-Install the following by going to **Tools > Manage Libraries**
+| Connect From Arduino |  Connect To IMU |
+| ------------- | ------------- | 
+| A4  | SDA  | 
+| A5 | SCL | 
+| GND | GND  | 
+| 5V | Vin | 
+
+Install the following on your Arduino IDE by going to **Tools > Manage Libraries**
 
 - Arduino BNO055
 - Adafruit Unified Sensor
+
+Verify the USB Port by entering:
+
+    ls /dev/tty
+
+After verifying, make this port an executable by entering:
+
+    sudo chmod a+rw /dev/ttyUSB0 
 
 Code explanations:
 
