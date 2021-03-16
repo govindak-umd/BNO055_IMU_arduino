@@ -55,17 +55,22 @@ After verifying, make this port an executable by entering:
 </p>
 
 
+## ARDUINO C CODE LOOKUP TABLE
 
-Code explanations:
 
 | Serial Number| Code  | Function | Arduino Code Uploaded |
 | ------------- | ------------- | ------------- |------------- |
 | 1  | IMU_ACC_GYRO_MAG.ino | To access Acceleratometer, Gyroscope and Magnetometer data | IMU_ACC_GYRO_MAG |
 | 2 |IMU_X_Y_Z | To get inclination w.r.t X, Y, and Z axes |IMU_X_Y_Z |
 | 3 | IMU_QUARTERNION | Gets quarternion data from the BNO055 sensor | IMU_QUARTERNION |
-| 3 |  imu_read.py| Code to access the serial imu data and display the results |IMU_ACC_GYRO_MAG |
-| 4  |  plot_all_9axis_live.py | Access all 9 axis Serial data through python scripts |IMU_ACC_GYRO_MAG |
-| 5 | plot_acc.py | Plotting only acceleratometer data|IMU_ACC_GYRO_MAG |
-| 6 | quart_to_euler.py | Gets quarternion data and converts to Euler Angles and writes in a txt file | IMU_QUARTERNION |
+
+## PYTHON CODE LOOKUP TABLE
+
+| Serial Number| Code  | Function | Arduino Code Uploaded |
+| ------------- | ------------- | ------------- |------------- |
+| 1 |  imu_read.py| Code to access the serial imu data and display the results |IMU_ACC_GYRO_MAG |
+| 2  |  plot_all_9axis_live.py | Access all 9 axis Serial data through python scripts |IMU_ACC_GYRO_MAG |
+| 3 | plot_acc.py | Plotting only acceleratometer data|IMU_ACC_GYRO_MAG |
+| 4 | quart_to_euler.py | Gets quarternion data and converts to Euler Angles and writes in a txt file | IMU_QUARTERNION |
 
  
