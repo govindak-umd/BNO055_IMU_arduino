@@ -22,28 +22,26 @@ void loop() {
   imu::Vector<3> gyro_vec = myIMU.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
   imu::Vector<3> mag_vec = myIMU.getVector(Adafruit_BNO055::VECTOR_MAGNETOMETER);
 
-  Serial.print("Accelerometer data : ");
+  Serial.print("acc");
   Serial.print(acc_vec.x());
   Serial.print(",");
   Serial.print(acc_vec.y());
   Serial.print(",");
   Serial.println(acc_vec.z());
 
-  Serial.print("Gyroscope data : ");
+  Serial.print("gyr");
   Serial.print(gyro_vec.x());
   Serial.print(",");
   Serial.print(gyro_vec.y());
   Serial.print(",");
   Serial.println(gyro_vec.z());
 
-  Serial.print("Magnetometer data : ");
+  Serial.print("mag");
   Serial.print(mag_vec.x());
   Serial.print(",");
   Serial.print(mag_vec.y());
   Serial.print(",");
   Serial.println(mag_vec.z());
-
-  Serial.println("------");
   
   delay(BNO055_SAMPLERATE_DELAY_MS);
 }

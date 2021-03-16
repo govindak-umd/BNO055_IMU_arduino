@@ -30,9 +30,11 @@ def PlotData():
 while ser.isOpen():
 
 	# Convert from ascii encoding
+
 	imu_data = ser.readline().decode("ascii")
 
 	# Read the Line header
+	
 	data_code = imu_data[0:3]
 	if data_code == 'acc':
 		print('Acceleratometer data > ')
