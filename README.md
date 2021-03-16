@@ -16,9 +16,16 @@ The connections are laid out here:
 
 Install the following by going to **Tools > Manage Libraries**
 
--
--
+- Arduino BNO055
+- Adafruit Unified Sensor
 
 Code explanations:
 
-imu_test : To access Acceleratometer, Gyroscope and Magnetometer data
+| Serial Number| Code  | Function |
+| ------------- | ------------- | ------------- |
+| 1  | imu_test.ino | To access Acceleratometer, Gyroscope and Magnetometer data  |
+| 2  |   | |
+| 3 |  | |
+| 4 |  | |
+| 5 | | |
+ 
