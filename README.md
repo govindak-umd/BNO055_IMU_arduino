@@ -18,6 +18,13 @@ Wiring should be done as shown in the image below:
 
 The connections are laid out here:
 
+| Connect From Arduino |  Connect To IMU |
+| ------------- | ------------- | 
+| A4  | SDA  | 
+| A5 | SCL | 
+| GND | GND  | 
+| 5V | Vin | 
+
 Install the following by going to **Tools > Manage Libraries**
 
 - Arduino BNO055
