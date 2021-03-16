@@ -48,6 +48,7 @@ mag_z_array = []
 
 
 fig = plt.figure()
+fig.suptitle('Accelerometer x y z data vs time', fontsize=12)
 
 # Enter in a row, column, idx format
 
@@ -87,6 +88,7 @@ def AnimatePlots(i):
 	    i (TYPE): Description
 	
 	"""
+
 	global time_start
 
 	global acc_x_array

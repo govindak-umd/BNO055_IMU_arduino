@@ -42,13 +42,27 @@ After verifying, make this port an executable by entering:
 
     sudo chmod a+rw /dev/ttyUSB0 
 
+Graphs available
+
+- 9 Axis data - *plot_all_9axis_live.py*
+<p align="center">
+  <img height="500" src="Images/9_imu.png">
+</p>
+
+- Accelerometer 3-axis data - *plot_acc.py*
+<p align="center">
+  <img height="500" src="Images/3_acc.png">
+</p>
+
+
+
 Code explanations:
 
 | Serial Number| Code  | Function |
 | ------------- | ------------- | ------------- |
 | 1  | imu_test.ino | To access Acceleratometer, Gyroscope and Magnetometer data  |
 | 2 |  imu_read.py| Code to access the serial imu data and display the results |
-| 3  |  py_serial_test.py | Access Serial data through python scripts |
-| 4 |  | |
+| 3  |  plot_all_9axis_live.py | Access all 9 axis Serial data through python scripts |
+| 4 | plot_acc.py | Plotting only acceleratometer data|
 | 5 | | |
  

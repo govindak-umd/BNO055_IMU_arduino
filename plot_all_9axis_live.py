@@ -48,6 +48,7 @@ mag_z_array = []
 
 
 fig = plt.figure()
+fig.suptitle('Accelerometer, Gyroscope and Magnetometer data vs time', fontsize=12)
 
 # 3 X 3 plots, Plot 1
 acc_x_plot = fig.add_subplot(3,3,1)
@@ -77,7 +78,6 @@ time_stamps_mag = []
 
 time_start = time.time()
 
-# while ser.isOpen():
 def AnimatePlots(i):
 	"""Function to animate the plots
 	
@@ -85,6 +85,7 @@ def AnimatePlots(i):
 	    i (TYPE): Description
 	
 	"""
+
 	global time_start
 
 	global acc_x_array
