@@ -13,7 +13,7 @@ Hardware needed:
 
 
 <p align="center">
-  <img height="300" src="Images/Arduino_Nano_Pinout.jpg">
+  <img height="500" src="Images/Arduino_Nano_Pinout.jpg">
 </p>
 
 - Male to Male Jumpers
