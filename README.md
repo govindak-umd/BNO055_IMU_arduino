@@ -62,9 +62,9 @@ After verifying, make this port an executable by entering:
 ## ARDUINO C CODE LOOKUP TABLE
 
 
-| Serial Number| Code  | Function | 
+| Serial Number| Arduino Code Folder  | Function | 
 | ------------- | ------------- | ------------- |
-| 1  | IMU_ACC_GYRO_MAG.ino | To access Acceleratometer, Gyroscope and Magnetometer data | 
+| 1  | IMU_ACC_GYRO_MAG | To access Acceleratometer, Gyroscope and Magnetometer data | 
 | 2 |IMU_X_Y_Z | To get inclination w.r.t X, Y, and Z axes |
 | 3 | IMU_QUARTERNION | Gets quarternion data from the BNO055 sensor | 
 | 4 | CALLIBRATION_CHECK | To callibrate the Accelerometer, Gyroscope, Magnetometer and System of IMU | 
