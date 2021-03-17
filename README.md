@@ -2,10 +2,20 @@
 
 This repo shows you how to use BNO055 IMU
 
+<p align="center">
+  <img height="300" src="Images/IMU_BNO055.jpg">
+</p>
+
 Hardware needed:
 
 - BNO055 9-axis IMU sensor 
 - Arduino (Nano used here)
+
+
+<p align="center">
+  <img height="300" src="Images/Arduino_Nano_Pinout.jpg">
+</p>
+
 - Male to Male Jumpers
 - Breadboard
 - Arduino to PC USB Cable
