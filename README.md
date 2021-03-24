@@ -94,3 +94,4 @@ After verifying, make this port an executable by entering:
  ## References
 
 - Check the official Adafruit [GitHub](https://github.com/adafruit/Adafruit_BNO055.git) repo for reference
+- For Odometry Fusion check [this](https://philsal.co.uk/projects/imu-attitude-estimation) link
