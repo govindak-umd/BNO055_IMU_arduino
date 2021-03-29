@@ -11,7 +11,14 @@ import time
 import math
 
 
-ser = serial.Serial('/dev/ttyUSB0')
+# For Linux systems
+
+# ser = serial.Serial('/dev/ttyUSB0')
+
+# For Windows
+
+ser = serial.Serial('COM10')
+
 ser.baudrate = 115200
 
 fig = plt.figure()

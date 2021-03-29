@@ -23,7 +23,14 @@ import time
 
 import random
 
-ser = serial.Serial('/dev/ttyUSB0')
+# For Linux systems
+
+# ser = serial.Serial('/dev/ttyUSB0')
+
+# For Windows
+
+ser = serial.Serial('COM10')
+
 ser.baudrate = 115200
 
 acc_x_array = []

@@ -4,8 +4,14 @@ Attributes:
     ser (TYPE): Serial
 """
 import serial
+# For Linux systems
 
-ser = serial.Serial('/dev/ttyUSB0')
+# ser = serial.Serial('/dev/ttyUSB0')
+
+# For Windows
+
+ser = serial.Serial('COM10')
+
 ser.baudrate = 115200
 
 while ser.isOpen():

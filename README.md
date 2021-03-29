@@ -4,6 +4,11 @@
 
 Govind Ajith Kumar
 
+## OS
+
+- Ubuntu 18.04
+- Windows 10
+
 This repo shows you how to use BNO055 IMU
 
 <p align="center">
@@ -52,9 +57,20 @@ Verify the USB Port by entering:
 
     ls /dev/tty
 
-After verifying, make this port an executable by entering:
+After verifying, 
+
+On **Ubuntu**, make this port an executable by entering:
 
     sudo chmod a+rw /dev/ttyUSB0 
+
+On **Windows**, start command line as **administrator**, and run the python 
+command
+
+## Running Instructions
+
+- To run on an Ubuntu computer, set the serial port to ```/dev/ttyUSB0```
+- To run on a Windows computer, set the serial port to ```COM10``` or ```COM11```.
+
 
 ## Graphs available
 
