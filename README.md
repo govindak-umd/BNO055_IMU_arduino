@@ -1,5 +1,9 @@
 # BNO055_IMU_arduino
 
+## Author
+
+Govind Ajith Kumar
+
 This repo shows you how to use BNO055 IMU
 
 <p align="center">

@@ -24,7 +24,7 @@ def euler_from_quaternion(quarternion_list):
 
         t0 = +2.0 * (w * x + y * z)
         t1 = +1.0 - 2.0 * (x * x + y * y)
-        roll_x = math.atan2(t0, t1)
+        yaw_z = math.atan2(t0, t1)
      
         t2 = +2.0 * (w * y - z * x)
         t2 = +1.0 if t2 > +1.0 else t2
@@ -33,10 +33,17 @@ def euler_from_quaternion(quarternion_list):
      
         t3 = +2.0 * (w * z + x * y)
         t4 = +1.0 - 2.0 * (y * y + z * z)
-        yaw_z = math.atan2(t3, t4)
+        roll_x = math.atan2(t3, t4)
      
         # data returned in radians
-        return roll_x, pitch_y, yaw_z
+        # return yaw_z, pitch_y, roll_x
+
+        #returning data in degrees
+        yaw_z = yaw_z*(180/math.pi)
+        pitch_y = pitch_y*(180/math.pi)
+        roll_x = roll_x*(180/math.pi)
+        return yaw_z, pitch_y, roll_x
+
 
 # To keep a record
 quart_array = []
@@ -67,7 +74,7 @@ try:
         quart_array.append(imu_data_list)
 
         # Show in the terminal
-        calc_roll, calc_pitch, calc_yaw = euler_from_quaternion(imu_data_list)
+        calc_yaw, calc_pitch, calc_roll = euler_from_quaternion(imu_data_list)
 
         f.write(str(calc_roll)+' '+str(calc_pitch)+' '+str(calc_yaw)+"\n")
         roll_array.append(calc_roll)

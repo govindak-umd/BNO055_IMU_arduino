@@ -10,6 +10,7 @@ from matplotlib import style
 import time
 import math
 
+
 ser = serial.Serial('/dev/ttyUSB0')
 ser.baudrate = 115200
 
@@ -29,6 +30,9 @@ time_stamps_rpy = []
 
 time_start = time.time()
 
+f= open("quarternion_data.txt","w+")
+
+
 def euler_from_quaternion(quarternion_list):
         """
         Convert a quaternion into euler angles (roll, pitch, yaw)
@@ -44,7 +48,7 @@ def euler_from_quaternion(quarternion_list):
 
         t0 = +2.0 * (w * x + y * z)
         t1 = +1.0 - 2.0 * (x * x + y * y)
-        roll_x = math.atan2(t0, t1)
+        yaw_z = math.atan2(t0, t1)
      
         t2 = +2.0 * (w * y - z * x)
         t2 = +1.0 if t2 > +1.0 else t2
@@ -53,10 +57,16 @@ def euler_from_quaternion(quarternion_list):
      
         t3 = +2.0 * (w * z + x * y)
         t4 = +1.0 - 2.0 * (y * y + z * z)
-        yaw_z = math.atan2(t3, t4)
+        roll_x = math.atan2(t3, t4)
      
         # data returned in radians
-        return roll_x, pitch_y, yaw_z
+        # return roll_x, pitch_y, yaw_z
+
+        #returning data in degrees
+        yaw_z = yaw_z*(180/math.pi)
+        pitch_y = pitch_y*(180/math.pi)
+        roll_x = roll_x*(180/math.pi)
+        return yaw_z, pitch_y, roll_x
 
 # To keep a record
 quart_array = []
@@ -92,10 +102,13 @@ def AnimateRPYPlots(i):
 
     # Show in the terminal
 
-    calc_roll, calc_pitch, calc_yaw = euler_from_quaternion(imu_data_list)
+    calc_yaw, calc_pitch, calc_roll = euler_from_quaternion(imu_data_list)
+    print(' Yaw  = ', calc_yaw,' Pitch = ', calc_pitch ,'Roll= ', calc_roll)
     roll_array.append(calc_roll)
     pitch_array.append(calc_pitch)
     yaw_array.append(calc_yaw)
+
+    f.write(str(calc_roll)+' '+str(calc_pitch)+' '+str(calc_yaw)+"\n")
 
     # Save the time stamp
 
@@ -119,11 +132,13 @@ def AnimateRPYPlots(i):
 
 try:
 
-    animate_plot = animation.FuncAnimation(fig, AnimateRPYPlots, interval=1)
+    animate_plot = animation.FuncAnimation(fig, AnimateRPYPlots, interval=5)
     plt.show()
+
 
 # Save when the user exits
 
 except KeyboardInterrupt:
 
     print('File closed and saved upon user request')
+    f.close()
