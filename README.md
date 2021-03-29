@@ -2,10 +2,20 @@
 
 This repo shows you how to use BNO055 IMU
 
+<p align="center">
+  <img height="300" src="Images/IMU_BNO055.jpg">
+</p>
+
 Hardware needed:
 
 - BNO055 9-axis IMU sensor 
 - Arduino (Nano used here)
+
+
+<p align="center">
+  <img height="500" src="Images/Arduino_Nano_Pinout.jpg">
+</p>
+
 - Male to Male Jumpers
 - Breadboard
 - Arduino to PC USB Cable
@@ -62,9 +72,9 @@ After verifying, make this port an executable by entering:
 ## ARDUINO C CODE LOOKUP TABLE
 
 
-| Serial Number| Code  | Function | 
+| Serial Number| Arduino Code Folder  | Function | 
 | ------------- | ------------- | ------------- |
-| 1  | IMU_ACC_GYRO_MAG.ino | To access Acceleratometer, Gyroscope and Magnetometer data | 
+| 1  | IMU_ACC_GYRO_MAG | To access Acceleratometer, Gyroscope and Magnetometer data | 
 | 2 |IMU_X_Y_Z | To get inclination w.r.t X, Y, and Z axes |
 | 3 | IMU_QUARTERNION | Gets quarternion data from the BNO055 sensor | 
 | 4 | CALLIBRATION_CHECK | To callibrate the Accelerometer, Gyroscope, Magnetometer and System of IMU | 
@@ -89,3 +99,4 @@ the position will be way off. Please look into other measures.
  ## References
 
 - Check the official Adafruit [GitHub](https://github.com/adafruit/Adafruit_BNO055.git) repo for reference
+- For Odometry Fusion check [this](https://philsal.co.uk/projects/imu-attitude-estimation) link
