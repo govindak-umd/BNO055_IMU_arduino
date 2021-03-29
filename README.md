@@ -76,11 +76,16 @@ After verifying, make this port an executable by entering:
 | Serial Number| Code  | Function | Arduino Code Uploaded |
 | ------------- | ------------- | ------------- |------------- |
 | 1 |  imu_read.py| Code to access the serial imu data and display the results |IMU_ACC_GYRO_MAG |
-| 2  |  plot_all_9axis_live.py | Access all 9 axis Serial data through python scripts |IMU_ACC_GYRO_MAG |
+| 2  | plot_all_9axis_live.py | Access all 9 axis Serial data through python scripts |IMU_ACC_GYRO_MAG |
 | 3 | plot_acc.py | Plotting only acceleratometer data|IMU_ACC_GYRO_MAG |
 | 4 | quart_to_euler.py | Gets quarternion data and converts to Euler Angles and writes in a txt file | IMU_QUARTERNION |
-| 5 | plot_roll_pitch_yaw_live.py.py | Gets quarternion data and converts to Euler Angles and plots it | IMU_QUARTERNION |
+| 5 | plot_roll_pitch_yaw_live.py | Gets quarternion data and converts to Euler Angles and plots it | IMU_QUARTERNION |
 
+## Note
+
+BNO055 is not suitable for X,Y, and Z positions. Use a GPS for that. This is because finding the x, y and z positions
+involve double integration of the accelerometer data. And since the accelerometer data has a lot of noise,
+the position will be way off. Please look into other measures.
  ## References
 
 - Check the official Adafruit [GitHub](https://github.com/adafruit/Adafruit_BNO055.git) repo for reference
