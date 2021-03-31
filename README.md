@@ -96,7 +96,7 @@ command
 | ------------- | ------------- | ------------- |
 | 1  | IMU_ACC_GYRO_MAG | To access Accelerometer, Gyroscope and Magnetometer data | 
 | 2 |IMU_X_Y_Z | To get inclination w.r.t X, Y, and Z axes |
-| 3 | IMU_QUARTERNION | Gets quaternion data from the BNO055 sensor | 
+| 3 | IMU_QUATERNION | Gets quaternion data from the BNO055 sensor | 
 | 4 | CALIBRATION_CHECK | To calibrate the Accelerometer, Gyroscope, Magnetometer and System of IMU | 
 | 5 | ALL_IMU_DATA | Access all the possible data from BNO055 IMU |
 | 6 | POSITION | Get position data from IMU | 
@@ -107,10 +107,10 @@ command
 | ------------- | ------------- | ------------- |------------- |
 | 1 |  imu_read.py| Code to access the serial imu data and display the results |IMU_ACC_GYRO_MAG |
 | 2  | plot_all_9axis_live.py | Access all 9 axis Serial data through python scripts |IMU_ACC_GYRO_MAG |
-| 3 | plot_acc.py | Plotting only acceleratometer data|IMU_ACC_GYRO_MAG |
-| 4 | quart_to_euler.py | Gets quarternion data and converts to Euler Angles and writes in a txt file | IMU_QUARTERNION |
-| 5 | plot_roll_pitch_yaw_live.py | Gets quarternion data and converts to Euler Angles and saves it in txt file | IMU_QUARTERNION |
-| 6 | plot_tum_format_roll_pitch_yaw_live.py | Saves quarternion data in txt file | IMU_QUARTERNION |
+| 3 | plot_acc.py | Plotting only accelerometer data|IMU_ACC_GYRO_MAG |
+| 4 | quart_to_euler.py | Gets quaternion data and converts to Euler Angles and writes in a txt file | IMU_quaternion |
+| 5 | plot_roll_pitch_yaw_live.py | Gets quaternion data and converts to Euler Angles and saves it in txt file | IMU_QUATERNION |
+| 6 | plot_tum_format_roll_pitch_yaw_live.py | Saves quaternion data in txt file | IMU_QUATERNION |
 
 ## Note
 
@@ -120,4 +120,4 @@ the position will be way off. Please look into other measures.
  ## References
 
 - Check the official Adafruit [GitHub](https://github.com/adafruit/Adafruit_BNO055.git) repo for reference
-- For Odometry Fusion check [this](https://philsal.co.uk/projects/imu-attitude-estimation) link
+- For odometry Fusion check [this](https://philsal.co.uk/projects/imu-attitude-estimation) link

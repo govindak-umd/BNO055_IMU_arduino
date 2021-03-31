@@ -1,4 +1,4 @@
-"""Code to save quarternion data to a txt file
+"""Code to save quaternion data to a txt file
 
 Attributes:
     ser (TYPE): Serial
@@ -36,10 +36,10 @@ time_stamps_rpy = []
 
 time_start = time.time()
 
-f = open("quarternion_data.txt", "w+")
+f = open("quaternion_data.txt", "w+")
 
 
-def euler_from_quaternion(quarternion_list):
+def euler_from_quaternion(quaternion_list):
     """
     Convert a quaternion into euler angles (roll, pitch, yaw)
     roll is rotation around x in radians (counterclockwise)
@@ -47,10 +47,10 @@ def euler_from_quaternion(quarternion_list):
     yaw is rotation around z in radians (counterclockwise)
     """
 
-    x = float(quarternion_list[0])
-    y = float(quarternion_list[1])
-    z = float(quarternion_list[2])
-    w = float(quarternion_list[3])
+    x = float(quaternion_list[0])
+    y = float(quaternion_list[1])
+    z = float(quaternion_list[2])
+    w = float(quaternion_list[3])
 
     t0 = +2.0 * (w * x + y * z)
     t1 = +1.0 - 2.0 * (x * x + y * y)
