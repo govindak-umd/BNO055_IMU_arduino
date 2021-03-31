@@ -11,13 +11,13 @@ File→Examples→Adafruit BNO055→Raw Data
   SCL to analog 5 | SDA to analog 4 | VDD to 3.3V DC | GND to common ground
 */
 
-#define BNO055_SAMPLERATE_DELAY_MS (100)          // Delay between data requests
+#define BNO055_SAMPLERATE_DELAY_MS (200)          // Delay between data requests
 
 Adafruit_BNO055 bno = Adafruit_BNO055();          // Create sensor object bno based on Adafruit_BNO055 library
 
 void setup(void)
 {
-  Serial.begin(115200);                           // Begin serial port communication
+  Serial.begin(9600);                           // Begin serial port communication
   if(!bno.begin())                                // Initialize sensor communication
   {  
     Serial.print("Ooops, no BNO055 detected ... Check your wiring or I2C ADDR!");  

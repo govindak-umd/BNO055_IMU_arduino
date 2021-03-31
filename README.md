@@ -96,8 +96,8 @@ command
 | ------------- | ------------- | ------------- |
 | 1  | IMU_ACC_GYRO_MAG | To access Acceleratometer, Gyroscope and Magnetometer data | 
 | 2 |IMU_X_Y_Z | To get inclination w.r.t X, Y, and Z axes |
-| 3 | IMU_QUARTERNION | Gets quarternion data from the BNO055 sensor | 
-| 4 | CALLIBRATION_CHECK | To callibrate the Accelerometer, Gyroscope, Magnetometer and System of IMU | 
+| 3 | IMU_QUARTERNION | Gets quaternion data from the BNO055 sensor | 
+| 4 | CALIBRATION_CHECK | To calibrate the Accelerometer, Gyroscope, Magnetometer and System of IMU | 
 | 5 | ALL_IMU_DATA | Access all the possible data from BNO055 IMU |
 | 6 | POSITION | Get position data from IMU | 
 
@@ -109,7 +109,8 @@ command
 | 2  | plot_all_9axis_live.py | Access all 9 axis Serial data through python scripts |IMU_ACC_GYRO_MAG |
 | 3 | plot_acc.py | Plotting only acceleratometer data|IMU_ACC_GYRO_MAG |
 | 4 | quart_to_euler.py | Gets quarternion data and converts to Euler Angles and writes in a txt file | IMU_QUARTERNION |
-| 5 | plot_roll_pitch_yaw_live.py | Gets quarternion data and converts to Euler Angles and plots it | IMU_QUARTERNION |
+| 5 | plot_roll_pitch_yaw_live.py | Gets quarternion data and converts to Euler Angles and saves it in txt file | IMU_QUARTERNION |
+| 6 | plot_tum_format_roll_pitch_yaw_live.py | Saves quarternion data in txt file | IMU_QUARTERNION |
 
 ## Note
 
