@@ -103,7 +103,7 @@ command
 
 ## PYTHON CODE LOOKUP TABLE
 
-| Serial Number| Code  | Function | Arduino Code Uploaded |
+| Serial Number| Code  | Function | Arduino Code Flashed |
 | ------------- | ------------- | ------------- |------------- |
 | 1 |  imu_read.py| Code to access the serial imu data and display the results |IMU_ACC_GYRO_MAG |
 | 2  | plot_all_9axis_live.py | Access all 9 axis Serial data through python scripts |IMU_ACC_GYRO_MAG |
@@ -111,6 +111,8 @@ command
 | 4 | quart_to_euler.py | Gets quaternion data and converts to Euler Angles and writes in a txt file | IMU_quaternion |
 | 5 | plot_roll_pitch_yaw_live.py | Gets quaternion data and converts to Euler Angles and saves it in txt file | IMU_QUATERNION |
 | 6 | plot_tum_format_roll_pitch_yaw_live.py | Saves quaternion data in txt file | IMU_QUATERNION |
+| 7 |  save_tum_file.py| To save the IMU Data in quaternion format the video | IMU_QUATERNION |
+| 8 | utils.py | Contains utility variables | - |
 
 ## Note
 
